@@ -1,0 +1,15 @@
+{% extends 'Application/base.html' %}
+{% block title %} Student Details {% endblock %}
+{% block title1 %} Student Details {% endblock %}
+
+{% block content %}
+
+<img src = '{{student.stud_img.url}}' width="20%" height="40%" alt="Img Not Found" align="center"> <br>
+<br><br>
+<b>Name: {{student.firstName}} {{student.lastName}}
+<br><br>
+<b>Department: </b> <a href="{% url 'Application:department'%}{{student.dept_name.pk}}/">{{student.dept_name.pk}}</a>
+<br>
+<br>
+    <a href= "{%url 'Application:all-views' %}">UNIVERSITY HOME</a>
+{% endblock %}

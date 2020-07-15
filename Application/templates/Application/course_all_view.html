@@ -1,0 +1,22 @@
+{% extends 'Application/base.html' %}
+
+{% load crispy_forms_tags %}
+{% block title %} All Courses {% endblock %}
+{% block title1 %} All Courses {% endblock %}
+{% block content %}
+
+<img src="https://image.shutterstock.com/image-illustration/business-services-technical-help-gear-260nw-794147113.jpg"><br><br><br>
+
+<ol>
+{% for course in courses %}
+    <li>
+        Course ID: <a href="{% url 'Application:course'%}{{course.pk}}/">{{course.course_id}}</a>
+        <br>
+    </li> <br>
+{% endfor %}
+</ol>
+
+<br>
+<a href = "{% url 'Application:course-add' %}">Add Course</a> <br> <br>
+<a href= "{%url 'Application:all-views' %}"> HOME PAGE</a>
+{% endblock %}

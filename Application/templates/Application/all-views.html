@@ -1,0 +1,18 @@
+{% extends 'Application/base.html' %}
+{% block title %} WALCHAND COLLEGE OF ENGINEERING SANGLI {% endblock %}
+{% block title1 %} WALCHAND COLLEGE OF ENGINEERING {% endblock %}
+
+{% block content %}
+
+<br>
+        <img src="https://static.careers360.mobi/media/presets/720X480/colleges/social-media/media-gallery/2600/2018/5/24/Walchand-College-of-Engineering-Sangli2.jpg">
+        <br>
+        <br>
+        <a href = "{% url 'Application:student' %}">Student Data</a> <br>
+        <a href = "{% url 'Application:department' %}">Department Data</a><br>
+        <a href = "{% url 'Application:course' %}">Course Data</a><br>
+
+<br>
+
+<a href="{%url 'Application:all-views' %}" ><b>UNIVERSITY HOME</b></a>
+{% endblock %}

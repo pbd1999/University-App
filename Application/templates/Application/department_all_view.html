@@ -1,0 +1,20 @@
+{% extends 'Application/base.html' %}
+
+{% load crispy_forms_tags %}
+{% block title %} All Departments {% endblock %}
+{% block title1 %} All Departments {% endblock %}
+{% block content %}
+<img src="https://image.shutterstock.com/image-illustration/business-services-technical-help-gear-260nw-794147113.jpg">
+<br> <br><br>
+
+<ol>
+{% for department in departments %}
+    <li>
+        Department Name: <a href="{% url 'Application:department'%}{{department.pk}}/">{{department.dept_name}}</a>
+        <br>
+    </li> <br>
+{% endfor %}
+</ol>
+<a href = "{% url 'Application:department-add' %}">Add departments</a>
+<br><br><a href= "{%url 'Application:all-views' %}">UNIVERSITY HOME</a>
+{% endblock %}
